@@ -685,7 +685,7 @@ function applyTranslations() {
     });
   });
   
-  document.title = t("meta_title") || "Vinyl Cafe";
+  document.title = "Vinyl Cafe";
   
   document.querySelectorAll(".lang__item").forEach(function(item) {
     item.classList.toggle("active", item.getAttribute("data-lang") === currentLang);
