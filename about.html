@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О нас — Vinyl Cafe</title>
+<meta name="description" content="История Vinyl Cafe — кофе и винил.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/images/logo_bg.png">
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<header class="nav" id="siteNav">
+  <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/images/logo_bg.png" alt="Vinyl Cafe" class="nav__logo-img" style="height:48px; width:auto;">
+          <span class="nav__logo-text">Vinyl Cafe</span>
+        </a>
+    <nav class="nav__links">
+      <a href="index.html" class="nav__link" data-i18n="nav_home">Главная</a>
+      <a href="menu.html" class="nav__link" data-i18n="nav_menu">Меню</a>
+      <a href="about.html" class="nav__link active" data-i18n="nav_about">О нас</a>
+      <a href="events.html" class="nav__link" data-i18n="nav_events">Афиша</a>
+      <a href="contacts.html" class="nav__link" data-i18n="nav_contacts">Контакты</a>
+    </nav>
+    <div class="nav__right">
+      <div class="lang" id="langSwitcher">
+        <button class="lang__btn" type="button">
+          <span id="langCurrent">RU</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang__menu">
+          <button class="lang__item" data-lang="ru"><span class="lang__flag">RU</span> Русский</button>
+          <button class="lang__item" data-lang="en"><span class="lang__flag">EN</span> English</button>
+          <button class="lang__item" data-lang="uz"><span class="lang__flag">UZ</span> O'zbekcha</button>
+        </div>
+      </div>
+      <button class="nav__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="nav__overlay" id="navOverlay"></div>
+<div class="nav__drawer" id="navDrawer">
+  <button class="nav__drawer-close" id="drawerClose">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+  </button>
+  <div class="nav__drawer-links">
+    <a href="index.html" data-i18n="nav_home">Главная</a>
+    <a href="menu.html" data-i18n="nav_menu">Меню</a>
+    <a href="about.html" data-i18n="nav_about">О нас</a>
+    <a href="events.html" data-i18n="nav_events">Афиша</a>
+    <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+  </div>
+</div>
+
+<!-- ══════════════ ABOUT HERO ══════════════ -->
+<section class="page-hero" style="background:var(--brown-1);">
+  <div class="container" style="text-align:center; padding:100px 0 60px;">
+    <div class="eyebrow" style="justify-content:center;" data-i18n="about_eyebrow">Наша история</div>
+    <h1 style="font-size:clamp(40px,5vw,64px); margin-top:20px;" data-i18n="about_title">Кофе и винил — одна и та же история</h1>
+    <p style="max-width:600px; margin:20px auto 0; font-size:18px;" data-i18n="about_p1">Vinyl Cafe — это пространство, где аромат свежесваренного кофе встречается с тёплым звуком аналоговой музыки.</p>
+  </div>
+</section>
+
+<!-- ══════════════ ABOUT CONTENT + ГАЛЕРЕЯ ══════════════ -->
+<section class="about-page">
+  <div class="container">
+    <!-- Текстовая часть -->
+    <div class="about-page__text-full reveal">
+      <div class="about-page__text-full-inner">
+        <p style="font-size:18px; line-height:1.8; margin-bottom:24px;">
+          <strong>Vinyl Cafe</strong> — это пространство, где аромат свежесваренного кофе встречается с тёплым звуком аналоговой музыки.
+        </p>
+        <p style="font-size:16px; line-height:1.8; color:var(--ink-light); margin-bottom:24px;" data-i18n="about_p2">
+          Мы верим, что хороший кофе и хорошая музыка — это одно и то же: оба требуют времени, внимания и правильного момента.
+        </p>
+        <div class="about-page__quote">
+          "Хороший кофе нельзя выпить залпом. Хорошую пластинку нельзя послушать вполуха."
+        </div>
+        <p style="font-size:16px; line-height:1.8; color:var(--ink-light); margin-top:24px;">
+          Наша коллекция виниловых пластинок постоянно растёт. Каждый день — новый диск, новое настроение, новая история. Приходите и услышите разницу.
+        </p>
+      </div>
+    </div>
+
+    <!-- ══════ ПОЛНОЦЕННАЯ ГАЛЕРЕЯ ══════ -->
+    <div class="about-page__gallery-full">
+      <h3 class="gallery-title">Фотогалерея</h3>
+      <div class="gallery-full-grid">
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Кофе и атмосфера">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Кофе и атмосфера</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Коллекция пластинок">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Коллекция пластинок</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Уютный зал">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Уютный зал</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Барная стойка">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Барная стойка</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Кофе с музыкой">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Кофе с музыкой</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Виниловые вечера">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Виниловые вечера</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Кофе с десертом">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Кофе с десертом</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Атмосфера">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Атмосфера</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Кофейные зерна">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Кофейные зерна</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Кофе с круассаном">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Кофе с круассаном</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Кофе в чашке">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Кофе в чашке</span>
+          </div>
+        </div>
+        <div class="gallery-full-item" onclick="openLightbox(this)">
+          <img src="assets/images/пример.jpeg" alt="Вечерний кофе">
+          <div class="gallery-full-item__overlay">
+            <span class="gallery-full-item__icon">🔍</span>
+            <span class="gallery-full-item__title">Вечерний кофе</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ LIGHTBOX ══════════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+  <div class="lightbox__content">
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+    <div class="lightbox__caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+<a href="index.html" class="nav__logo">
+  <img src="assets/images/logo_bg.png" alt="Vinyl Cafe" class="nav__logo-img" style="height:48px; width:auto;">
+  <span class="nav__logo-text">Vinyl Cafe</span>
+</a>
+<p data-i18n="footer_desc">Пространство, где кофе встречается с виниловой музыкой.</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h5 data-i18n="footer_nav">Навигация</h5>
+          <a href="index.html" data-i18n="nav_home">Главная</a>
+          <a href="menu.html" data-i18n="nav_menu">Меню</a>
+          <a href="about.html" data-i18n="nav_about">О нас</a>
+          <a href="events.html" data-i18n="nav_events">Афиша</a>
+          <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5 data-i18n="footer_contacts">Контакты</h5>
+          <a href="tel:+998900000000">+998 XX XXX-XX-XX</a>
+          <a href="mailto:info@vinylcafe.uz">info@vinylcafe.uz</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Vinyl Cafe. <span data-i18n="footer_rights">Все права защищены.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ══════════════ LIGHTBOX ══════════════
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  const title = el.querySelector('.gallery-full-item__title');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightboxCaption.textContent = title ? title.textContent : img.alt;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
