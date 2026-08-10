@@ -1795,3 +1795,68 @@ body {
     transform: translateY(0);
   }
 }
+/* ════════════════════════════════════════════════════════
+   FIX: SAFE AREA ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+   ════════════════════════════════════════════════════════ */
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --nav-h-mobile: 68px;
+}
+
+/* Навигация */
+.nav {
+  padding-top: var(--safe-top);
+}
+
+.nav.is-scrolled {
+  padding-top: var(--safe-top);
+}
+
+/* Hero */
+.hero {
+  padding-top: calc(var(--nav-h) + var(--safe-top));
+}
+
+/* Табы меню */
+.menu-tabs-wrap {
+  top: calc(68px + var(--safe-top));
+}
+
+/* ─── МОБИЛЬНАЯ ВЕРСИЯ ─── */
+@media (max-width: 768px) {
+  .nav {
+    height: var(--nav-h-mobile);
+    padding-top: var(--safe-top);
+  }
+  
+  .nav.is-scrolled {
+    height: var(--nav-h-mobile);
+  }
+  
+  .hero {
+    padding-top: calc(var(--nav-h-mobile) + var(--safe-top));
+  }
+  
+  .hero__content {
+    padding-top: calc(20px + var(--safe-top));
+    padding-bottom: calc(40px + var(--safe-bottom));
+  }
+  
+  .menu-tabs-wrap {
+    top: calc(var(--nav-h-mobile) + var(--safe-top));
+  }
+  
+  .page-hero {
+    padding-top: calc(var(--nav-h-mobile) + var(--safe-top) + 20px);
+  }
+  
+  .about-page,
+  .menu-body,
+  .events-page,
+  .contacts-page {
+    padding-top: calc(20px + var(--safe-top));
+    padding-bottom: calc(40px + var(--safe-bottom));
+  }
+}
